@@ -1,6 +1,10 @@
+/*Importing react library and PropTypes library which is used for 
+checking the props the component receives*/
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/*this block of code is a helper function for getting the badge according to the given rank;
+returns gold for 1,silver for 2,bronnze for 3 and others nothing*/
 const EmployeeRow = ({ employee }) => {
   const getBadge = (rank) => {
     switch (rank) {
@@ -17,14 +21,15 @@ const EmployeeRow = ({ employee }) => {
 
   return (
     <tr>
+      {/*displays the badge for employees rank */}
       <td>
       {getBadge(employee.rank)}
       </td>
+      {/*displays the rank of employees*/}
       <td>
-        
         <span className='employee-name'>{employee.rank}</span>
-        
       </td>
+      {/*displays the image and name of employees*/}
       <td>
       <div className="employee-img-container">
         <img className='emply-img' src={employee.image} alt={employee.name} />
@@ -32,6 +37,7 @@ const EmployeeRow = ({ employee }) => {
       </div>
         
       </td>
+      {/*displays the designation and hours worked of employees*/}
       <td>{employee.designation}</td>
       <td>{employee.hoursWorked}</td>
       <td>
@@ -45,6 +51,7 @@ const EmployeeRow = ({ employee }) => {
   );
 };
 
+{/*defining propType object to show the types and requirement of employee prop*/}
 EmployeeRow.propTypes = {
   employee: PropTypes.shape({
     rank: PropTypes.number.isRequired,

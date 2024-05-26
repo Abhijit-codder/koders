@@ -1,12 +1,11 @@
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #f4f4f9;
 }
-.App-header {
-  
-  
+/*Heading of Dashboard*/
+.App-header 
+{
   margin-left: 10px;
   padding: 10px;
   display: flex;
@@ -14,12 +13,26 @@ body {
   justify-content: left;
   margin-bottom: -80px;
 }
-.head{
+.head
+{
   color: black;
   font-size: 30px;
-
 }
 
+/*Date styling*/
+.date-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 10px;
+  margin-right: 25px;
+}
+.date-part {
+  display: block;
+}
+
+/*Dashboard head logo styling*/
 .App-logo {
   width: auto;
   height: auto;
@@ -28,9 +41,7 @@ body {
   border-radius: 500px;
 
 }
-
-
-
+/*Main Content of the page(layout)*/
 .main-content {
   display: flex;
   flex-direction: column;
@@ -38,26 +49,19 @@ body {
   padding: 20px;
 }
 
-@media (min-width: 768px) {
-  .main-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
+/*Styling for Employee-Table and its properties*/
 .employee-table {
   width: 80%;
   flex: 2;
-  
   margin-bottom: 20px;
   margin-right: 10px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   overflow-x: auto;
 }
-
-.employee-table table {
+.employee-table table 
+{
   width: 100%;
   border-collapse: collapse;
 }
@@ -71,50 +75,50 @@ body {
 {
   background-color: hsl(249, 41%, 97%);
 }
-.employee-name {
+.employee-name 
+{
   font-weight: 600; 
-}
-.employee-table th:last-child, .employee-table td:last-child {
-  width: 700px; /* Adjust the width of the last column */
 }
 .employee-table th:nth-child(3), .employee-table td:nth-child(3)
 {
-  width: 900px; /* Adjust the width of the last column */
+  width: 900px; 
 }
 .employee-table th:nth-child(4)
 {
-  width: 400px; /* Adjust the width of the last column */
+  width: 400px;
 }
 .employee-table th:nth-child(5), .employee-table td:nth-child(5)
 {
-  width: 800px; /* Adjust the width of the last column */
+  width: 800px; 
 }
-
-
-
-.employee-table th, .employee-table td {
+.employee-table th:last-child, .employee-table td:last-child 
+{
+  width: 700px; 
+}
+.employee-table th, .employee-table td 
+{
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
-  
 }
-
-.emply-img {
+.emply-img 
+{
   border-radius: 50%;
   width: 40px;
   height: 40px;
   margin-right: 10px;
   display: inline-block;
 }
-.employee-img-container {
+.employee-img-container 
+{
   display: flex;
   align-items: center;
 }
-.badge {
+.badge 
+{
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
-  
   color: white;
   margin-left: 10px;
 }
@@ -122,35 +126,30 @@ body {
 {
   display: flex;
   align-items: center;
-  
-  
-  
 }
-.top-employee {
+
+/*Styling for top-employee box and its properties*/
+.top-employee 
+{
   width: 100%;
   max-width: 300px;
   height: 100%;
   overflow: hidden;
-  
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  
   text-align: center;
   margin-top: 68px;
-  margin-right: 10px;
-  
+  margin-right: 20px;
   margin-bottom: 260px;
 }
-
-.top-emply-img {
+.top-emply-img 
+{
   width: 90%;
   margin-top: 15px;
-  
-  
 }
-
-.top-employee h2, .top-employee p {
+.top-employee h2, .top-employee p 
+{
   margin: 0;
 }
 .bottom-img
@@ -159,7 +158,6 @@ body {
   height: 200px;
   margin-bottom: -7px;
   object-fit: cover;
-  
 }
 .top-emply-title
 {
@@ -173,4 +171,15 @@ body {
 .top-emply-desig
 {
   font-size: 14px;
+}
+
+/*For adapting the page to different media devices*/
+@media (min-width: 768px) 
+{
+  .main-content 
+  {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
 }

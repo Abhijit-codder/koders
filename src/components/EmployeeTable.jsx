@@ -1,9 +1,11 @@
+/*Importing React and hooks from the React library and EmployeeRow component  */
 import React, { useState, useEffect } from 'react';
 import EmployeeRow from './EmployeeRow.jsx';
 
+/*In this block of code we are defining EmployeeTable component,state to store the list of employees
+async function to fetch emplyee data and setting the fetched employee data to state */
 const EmployeeTable = () => {
   const [employees, setEmployees] = useState([]);
-
   useEffect(() => {
     const fetchEmployees = async () => {
       const fetchedEmployees = [
@@ -16,29 +18,29 @@ const EmployeeTable = () => {
         { rank: 8, name: 'Sunil Yadav', designation: 'Developer', hoursWorked: '7(24)', changes: '1.5hrs', image: 'emply-2.png',rankimage: 'rank-new.png' },
         { rank: 9, name: 'Akash Roy', designation: 'Business Analyst', hoursWorked: '7(21)', changes: '1.5hrs', image: 'emply-2.png',rankimage: 'rank-new-2.png' },
         { rank: 10, name: 'Rohit Soni', designation: 'Developer', hoursWorked: '7(20)', changes: '1.5hrs', image: 'emply-2.png',rankimage: 'rank-new-2.png' },
-        { rank: 11, name: 'Suraj Chauhan', designation: 'Developer', hoursWorked: '7(18)', changes: '1.5hrs', image: 'emply-2.png',rankimage: 'rank-new-2.png' },
-        
+        { rank: 11, name: 'Suraj Chauhan', designation: 'Developer', hoursWorked: '7(18)', changes: '1.5hrs', image: 'emply-2.png',rankimage: 'rank-new-2.png' },  
       ];
       setEmployees(fetchedEmployees);
     };
-
     fetchEmployees();
   }, []);
 
+  {/*rendering the employee table */}
   return (
     <div className="employee-table">
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Designation</th>
+            <th></th> {/* Empty header for the badge column */}
+            <th>Rank</th> {/*  for the rank column */}
+            <th>Name</th> {/* Head for the name column */}
+            <th>Designation</th> {/* Header for  designation column */}
             <th>No. of hours worked</th>
             <th>Changes</th>
             
           </tr>
         </thead>
+        {/* here mapping is done to the employees array to render each EmployeeRow component */}
         <tbody>
           {employees.map((employee, index) => (
             <EmployeeRow key={index} employee={employee} />
@@ -48,5 +50,5 @@ const EmployeeTable = () => {
     </div>
   );
 };
-
+//Export the EmployeeTable component as the default export
 export default EmployeeTable;
