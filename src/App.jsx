@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className='App-header'>
         <img  src="logo-new.png" alt="Logo" className="App-logo" />
-        <h1 className='head'>Employees Activity Dashboard</h1>
+        <h1 className="head">Employees Activity Dashboard</h1>
         
       </header>
       <div className="date-container">
