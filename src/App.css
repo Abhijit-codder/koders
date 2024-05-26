@@ -46,13 +46,13 @@ body {
 }
 
 .employee-table {
-  width: 70%;
+  width: 80%;
   flex: 2;
   
   margin-bottom: 20px;
   margin-right: 10px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   overflow-x: auto;
 }
@@ -63,27 +63,33 @@ body {
 }
 .employee-table th
 {
-  background-color: rgb(7, 7, 187);
+  background-color: rgb(10, 10, 152);
   color: white;
+  font-weight: normal;
 }
 .employee-table tr:nth-child(even) 
 {
   background-color: hsl(249, 41%, 97%);
 }
 .employee-name {
-  font-weight: bold; 
+  font-weight: 600; 
 }
 .employee-table th:last-child, .employee-table td:last-child {
-  width: 500px; /* Adjust the width of the last column */
+  width: 700px; /* Adjust the width of the last column */
 }
 .employee-table th:nth-child(3), .employee-table td:nth-child(3)
 {
-  width: 600px; /* Adjust the width of the last column */
+  width: 900px; /* Adjust the width of the last column */
+}
+.employee-table th:nth-child(4)
+{
+  width: 400px; /* Adjust the width of the last column */
 }
 .employee-table th:nth-child(5), .employee-table td:nth-child(5)
 {
   width: 800px; /* Adjust the width of the last column */
 }
+
 
 
 .employee-table th, .employee-table td {
@@ -93,7 +99,7 @@ body {
   
 }
 
-.employee-table img {
+.emply-img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -112,11 +118,19 @@ body {
   color: white;
   margin-left: 10px;
 }
-
+.rank-img
+{
+  display: flex;
+  align-items: center;
+  
+  
+  
+}
 .top-employee {
   width: 100%;
   max-width: 300px;
   height: 100%;
+  overflow: hidden;
   
   background-color: white;
   border-radius: 8px;
@@ -124,12 +138,12 @@ body {
   
   text-align: center;
   margin-top: 68px;
-  margin-right: 50px;
+  margin-right: 10px;
   
-  margin-bottom: 300px;
+  margin-bottom: 260px;
 }
 
-.top-employee img {
+.top-emply-img {
   width: 90%;
   margin-top: 15px;
   
@@ -138,4 +152,25 @@ body {
 
 .top-employee h2, .top-employee p {
   margin: 0;
+}
+.bottom-img
+{
+  width: 100%;
+  height: 200px;
+  margin-bottom: -7px;
+  object-fit: cover;
+  
+}
+.top-emply-title
+{
+  color: rgb(6, 6, 186);
+  font-size: 22px;
+}
+.top-emply-name
+{
+  font-size: 20px;
+}
+.top-emply-desig
+{
+  font-size: 14px;
 }

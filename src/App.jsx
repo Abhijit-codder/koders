@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className='App-header'>
-        <img  src="logo-1.png" alt="Logo" className="App-logo" />
+        <img  src="logo-new.png" alt="Logo" className="App-logo" />
         <h1 className='head'>Employees Activity Dashboard</h1>
       </header>
       <main>

@@ -22,10 +22,11 @@ const TopEmployee = () => {
 
   return (
     <div className="top-employee">
-      <img src={topEmployee.image} alt={topEmployee.name} />
-      <h2>{topEmployee.name}</h2>
-      <p>{topEmployee.designation}</p>
-      <img src={topEmployee.image} alt={topEmployee.name} />
+      <img className='top-emply-img' src={topEmployee.image} alt={topEmployee.name} />
+      <h1 className='top-emply-title'>Employee of the Month</h1>
+      <h2 className='top-emply-name'>{topEmployee.name}</h2>
+      <p className='top-emply-desig'>{topEmployee.designation}</p>
+      <img className='bottom-img' src="top-emply-bottom.png" alt="" />
     </div>
   );
 };
