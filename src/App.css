@@ -181,36 +181,100 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-  
 }
-@media (max-width: 925px)
+
+@media (max-width: 925px) 
 {
   .main-content 
   {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
+
   .App-header 
   {
-   margin-left: 10px;
-   padding: 10px;
-   display: flex;
-   align-items: left;
-   justify-content: left;
-   margin-bottom: -80px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .App-logo {
+
+  .App-logo 
+  {
     width: 50px;
     height: 50px;
-    margin-bottom: 20px;
-    margin-right: 10px;
-    border-radius: 500px;
-  
   }
-  .head
+
+  .head 
   {
-    font-size: 30px;
-    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .date-container 
+  {
+    position: static;
+    margin: 10px 0;
+    
+  }
+}
+
+@media (max-width: 768px) 
+{
+  .employee-table 
+  {
+    width: 100%;
+  }
+
+  .top-employee 
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .date-container 
+  {
+    position: static;
+    text-align: left;
+   
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 480px) 
+{
+  .App-logo 
+  {
+    width: 40px;
+    height: 40px;
+  }
+  .head 
+  {
+    font-size: 20px;
+  }
+
+  .top-emply-title 
+  {
+    font-size: 18px;
+  }
+  .top-emply-name 
+  {
+    font-size: 16px;
+  }
+  .top-emply-desig {
+    font-size: 12px;
+  }
+  .date-container 
+  {
+    text-align: left;
+    background: #f4f4f9;
+    padding: 0;
+    margin-top: -100px;
+  }
+}
+@media (max-width: 1024px)
+{
+  .App-logo
+  {
+    height: 60px;
+    width: 60px;
   }
 
 }
